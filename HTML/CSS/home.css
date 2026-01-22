@@ -1,0 +1,611 @@
+/* Hero Stats Section */
+.hero-inner {
+  padding: 60px 20px;
+  background: #f3f4f6;   /* light background for contrast */
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+/* Stats Grid */
+.stats-wrapper {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* Individual Stat Card */
+.stat-card {
+  background: #ffffff;
+  padding: 40px 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.1);
+}
+
+/* Number Styling */
+.num {
+  font-size: 48px;
+  font-weight: 700;
+  color: #3b82f6;        /* primary color */
+  display: block;
+  margin-bottom: 12px;
+}
+
+/* Label Styling */
+.label {
+  font-size: 20px;
+  font-weight: 500;
+  color: #4b5563;         /* muted dark */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .stats-grid {
+    gap: 30px;
+  }
+  .num {
+    font-size: 42px;
+  }
+  .label {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .num {
+    font-size: 38px;
+  }
+  .label {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 480px) {
+  .num {
+    font-size: 32px;
+  }
+  .label {
+    font-size: 16px;
+  }
+}
+
+/* Paragraph */
+
+/* Section styling */
+.about-section {
+  padding: 80px 20px;           /* top/bottom space */
+  background-color: #f4f6f8;    /* light background */
+  display: flex;
+  justify-content: center;      /* center the container horizontally */
+}
+
+/* Container limits width for readability */
+.about-container {
+  max-width: 720px;             
+  width: 90%;                  /* small side margins */
+  margin: 0 auto;              /* center horizontally */
+  padding: 40px 0;
+}
+
+/* Section background for visual separation */
+.about-section {
+  background: #f9fafb;        /* light subtle background */
+  border-radius: 12px;
+  padding: 60px 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.about-section:hover {
+  transform: translateY(-5px);
+}
+
+/* Heading styling */
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #1f2937;              
+  text-align: left;
+  position: relative;
+}
+
+/* Optional underline for heading */
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #3b82f6;       /* primary color underline */
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+/* Paragraph styling */
+.about-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #4b5563;               
+  margin-bottom: 25px;
+  text-align: justify;           
+  text-justify: inter-word;     
+  word-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+/* Button styling */
+.about-btn-container {
+  margin-top: 20px;
+}
+
+.btn.primary {
+  display: inline-block;
+  background-color: #3b82f6;
+  color: #ffffff;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn.primary:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive styling */
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: 32px;
+  }
+  .about-content p {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 40px 16px;
+  }
+  .section-title {
+    font-size: 28px;
+  }
+  .about-content p {
+    font-size: 16px;
+  }
+  .btn.primary {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 24px;
+  }
+  .about-content p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+}
+
+
+
+/* Courses CSS */
+
+/* Courses Row */
+.courses-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+.btn:hover {
+  background: #2563eb; /* normal blue */
+  color: #fff;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.3);
+}
+
+/* Course Card */
+.course-card {
+  height: 240px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 25px 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* Horizontal scroll-like hover */
+.course-card:hover {
+  transform: translateX(12px); /* 👈 horizontal move */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+}
+
+/* Icon on top */
+.course-icon {
+  font-size: 46px;
+  color: #ffd700;
+  margin-bottom: 16px;
+  transition: 0.3s;
+}
+
+.course-card:hover .course-icon {
+  color: #111;
+}
+
+
+/* Course Name */
+.course-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+/* One-line description */
+.course-desc {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* one line only */
+}
+.courses-row + .btn {
+  display: block;
+  width: fit-content;
+  margin: 10px auto 0;
+  padding: 14px 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .courses-row {
+    grid-template-columns: 1fr;
+  }
+
+  .course-card:hover {
+    transform: translateY(-8px);
+  }
+}
+/*  Gallary CSS*/
+
+/* Modal overlay */
+.img-modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.85); /* semi-transparent background */
+
+}
+
+/* Full-size image inside modal */
+.img-modal .modal-content {
+  display: block;
+  margin: auto;
+  max-width: 90%;
+  max-height: 80%;
+  margin-top: 5%;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  cursor: pointer;
+
+}
+.section-sub {
+  font-size: 20px;
+}
+/* Caption text */
+.img-modal #caption {
+  text-align: center;
+  color: #fff;
+  padding: 10px 0;
+  font-size: 16px;
+  cursor: pointer;
+
+}
+
+/* Close button */
+.img-modal .close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 1100;
+
+}
+
+.img-modal .close:hover {
+  color: #ffd700;
+}
+
+/* Responsive for small devices */
+@media (max-width: 768px) {
+  .img-modal .modal-content {
+    max-width: 95%;
+    max-height: 70%;
+  }
+
+  .img-modal .close {
+    font-size: 32px;
+    top: 10px;
+    right: 15px;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Hero video */
+.hero-video {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  border: 1px solid #eee;
+  box-shadow: var(--shadow);
+  display: block;
+  object-fit: cover;
+}
+@media (max-width: 900px) {
+  .hero-video {
+    height: auto;
+  }
+}
+
+/* Background video for home hero */
+/* Hero video wrapper */
+.hero--bgvideo {
+  position: relative;
+  width: 100%;
+  height: 80vh; /* visible height on desktop */
+}
+
+.hero--bgvideo .hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero--bgvideo .hero-bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Hero overlay and content */
+.hero--bgvideo .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.35));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 15px;
+  color: #fff;
+}
+
+/* Responsive adjustments for mobile */
+/* Desktop / default */
+.hero--bgvideo {
+  position: relative;
+  width: 100%;
+  height: 80vh; /* desktop height */
+  overflow: hidden; /* prevent video overflow */
+}
+
+.hero--bgvideo .hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero--bgvideo .hero-bg video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fill without gaps */
+  display: block;
+}
+
+/* Overlay and content */
+.hero--bgvideo .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 15px;
+  color: #fff;
+  max-width: 100%;
+}
+
+/* Responsive for tablets/mobile */
+/* Mobile optimization */
+@media (max-width: 900px) {
+  .hero--bgvideo {
+    min-height: 60vh;
+    border-radius: 12px;
+  }
+
+  .hero--bgvideo .hero-content h3 {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+}
+
+/* iPhone SE / very small screens */
+@media (max-width: 400px) {
+  .hero--bgvideo {
+    height: 40vh; /* reduce height for small screens */
+  }
+  
+  .hero-content {
+    font-size: 16px;
+    padding: 0 10px;
+    line-height: 1.4;
+  }
+}
+
+/* Center hero content over video */
+.hero-text {
+  color: white;
+  text-align: center;
+  font-size: 28px;
+  line-height: 1.5;
+}
+.hero-inner {
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center */
+  min-height: 10vh;       /* full screen height */
+  padding-top: 5px;
+  padding-bottom: 10px;   /* reduce gap */
+  margin-bottom: 0;
+}
+.hero-content {
+  max-width: 100%;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;      /* vertical center */
+  justify-content: center;  /* horizontal center */
+  background: rgba(0, 0, 0, 0.6); /* optional dark overlay */
+}
+
+/*  cards*/
+.hero-inner .stat-card {
+  background: #fff;
+  border: 1px solid #eef0f4;
+  border-radius: 14px;
+  padding: 22px 26px;
+  min-width: 350px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.hero-inner .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  text-align: center;
+  justify-items: center;
+}
+
+
+/* Hover effect */
+.hero-inner .stat-card:hover {
+  background: #2563eb; /* normal blue */
+  color: #fff;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.3);
+}
+
+/* Change label color on hover */
+.hero-inner .stat-card:hover .label {
+  color: #e0e7ff;
+}
+
+/* Click effect */
+.hero-inner .stat-card:active {
+  transform: translateY(-2px) scale(0.98);
+}
+
+@media (max-width: 900px) {
+  .hero-inner .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Scrolling red tape */
+.tape {
+  width: 100%;
+  overflow: hidden;
+  background: var(--brand-red, #e63946); /* fallback red */
+  color: #fff;
+  border-radius: 999px;
+  padding: 10px 0;
+  margin: 18px auto 14px;
+  box-shadow: 0 8px 18px rgba(230, 57, 70, 0.25);
+}
+
+.tape-track {
+  display: flex;
+  gap: 80px;          /* space between items */
+  white-space: nowrap;
+  will-change: transform;
+  animation: tape-scroll 14s linear infinite reverse; /* right-to-left */
+}
+
+.tape-item {
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  padding: 0 12px;    /* inner padding for extra space */
+}
+
+/* Animation for scrolling */
+@keyframes tape-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Optional: smaller spacing on mobile */
+@media (max-width: 900px) {
+  .tape-track {
+    gap: 32px;
+  }
+
+  .tape-item {
+    padding: 0 16px;        
+    font-size: 14px;
+  }
+}
+
+
