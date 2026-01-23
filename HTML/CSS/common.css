@@ -391,6 +391,25 @@ a {
   color: #dce3f1;
   transition: all 0.3s;
 }
+.socials a {
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+/* Facebook */
+.socials a[href*="facebook"]:hover {
+    color: #1877f2;
+}
+
+/* Instagram */
+.socials a[href*="instagram"]:hover {
+    color: #e1306c;
+}
+
+/* YouTube */
+.socials a[href*="youtube"]:hover {
+    color: #ff0000;
+}
 
 .socials a:hover {
   background: #3b82f6;
