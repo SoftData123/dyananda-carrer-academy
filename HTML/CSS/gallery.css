@@ -1,0 +1,91 @@
+/* HERO */
+
+.gallery-hero{
+background:url("../assests/NCA1.jpeg") center top / cover no-repeat;
+min-height:420px;
+display:flex;
+align-items:center;
+position:relative;
+padding:60px 0;
+}
+
+.gallery-hero::before{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(to bottom,rgba(0,0,0,.55),rgba(0,0,0,.35));
+}
+
+.gallery-hero .container{
+position:relative;
+z-index:2;
+text-align:center;
+}
+
+.gallery-hero .section-title{
+color:#fff;
+font-size:42px;
+margin-bottom:10px;
+}
+
+.gallery-hero .section-sub{
+color:#eee;
+font-size:18px;
+}
+
+.gallery-hero .badge{
+color:#fff;
+border:1px solid rgba(255,255,255,.6);
+padding:6px 16px;
+border-radius:30px;
+display:inline-block;
+margin-bottom:15px;
+}
+
+/* GALLERY */
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:16px;
+}
+
+.gallery-grid img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:12px;
+transition:.3s;
+}
+
+.gallery-grid img:hover{
+transform:scale(1.05);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+.gallery-grid{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+@media(max-width:600px){
+
+.gallery-grid{
+grid-template-columns:1fr;
+}
+
+.gallery-hero{
+min-height:280px;
+}
+
+.gallery-hero .section-title{
+font-size:28px;
+}
+
+.gallery-hero .section-sub{
+font-size:15px;
+}
+
+}
