@@ -607,5 +607,58 @@
     font-size: 14px;
   }
 }
+/* ===============================
+   WHATSAPP FLOAT
+================================*/
+.whatsapp-float {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  width: 58px;
+  height: 58px;
+  background: #25d366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.25);
+  z-index: 2000;
+  transition: .3s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+/* Pulse */
+.whatsapp-float::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(37,211,102,.6);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: .7;}
+  100% { transform: scale(1.8); opacity: 0;}
+}
+
+/* ===============================
+   RESPONSIVE
+================================*/
+@media(max-width:768px){
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  section {
+    padding: 50px 5%;
+  }
+}
 
 

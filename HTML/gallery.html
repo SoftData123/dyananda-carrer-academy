@@ -38,6 +38,10 @@
             </nav>
 
         </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <span></span>
+        </button>
+
     </header>
 
     <main>
@@ -138,6 +142,15 @@
             </div>
         </div>
     </footer>
+    <script>
+        const navToggle = document.querySelector(".nav-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        navToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("open");
+        });
+    </script>
+
 
 </body>
 

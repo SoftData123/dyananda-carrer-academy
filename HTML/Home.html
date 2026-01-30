@@ -334,11 +334,23 @@
             </div>
         </div>
     </footer>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919527425002" target="_blank" class="whatsapp-float" aria-label="WhatsApp Chat">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
     <script>
         document.getElementById("year").innerText = new Date().getFullYear();
     </script>
 
+    <script>
+        const navToggle = document.querySelector(".nav-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        navToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("open");
+        });
+    </script>
 
     <script src="../script.js"></script>
 </body>

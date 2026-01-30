@@ -1,9 +1,16 @@
-/* About page hero section */
+/* RESET */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ================= COURSE HERO ================= */
+
 .about-hero {
   position: relative;
   width: 100%;
-  height: 50vh;                /* HALF screen height */
-  margin-top: 106px;            /* navbar height adjustment */
+  height: 50vh;
+  margin-top: 0; /* ✅ remove navbar gap */
   background-image: url("../assests/NCA3.jpeg");
   background-size: cover;
   background-position: center;
@@ -11,56 +18,64 @@
   overflow: hidden;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
-.section-title{
+
+.section-title {
   text-align: center;
-  align-items: center;
 }
-/* Dark overlay for text readability */
+
+/* Overlay */
+
 .about-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55); /* dark overlay */
+  background: rgba(0, 0, 0, 0.55);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-/* Content over image */
+
+/* Hero Content */
+
 .about-content {
   color: #fff;
   max-width: 900px;
-  padding: 0 16px; 
+  padding: 0 16px;
+  text-align: center;
 }
 
-/* Title styling */
+/* Title */
+
 .about-content .section-title {
   font-size: 35px;
   font-weight: 800;
-  margin-bottom: 125px;
+  margin-bottom: 20px;
   color: #fff;
-  text-align: center;
-  padding-bottom: 0px;
 }
+
+/* ================= COURSES GRID ================= */
+
 .courses-section {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  padding: 40px 20px;
+  padding: 60px 20px;
 }
 
-/* Card styling */
+/* Course Card */
+
 .course-card {
   background: #ffffff;
-  border-radius: 12px;
+  border-radius: 14px;
   padding: 20px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
-/* Hover effect */
 .course-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
 .course-card h3 {
@@ -73,7 +88,7 @@
   width: 100%;
   height: 180px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 10px;
   margin-bottom: 12px;
 }
 
@@ -83,17 +98,24 @@
   color: #4b5563;
 }
 
+/* ================= RESPONSIVE ================= */
+
 @media (max-width: 992px) {
   .courses-section {
-    grid-template-columns: repeat(2, 1fr); /* Tablet: 2 cards */
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-content .section-title {
+    font-size: 30px;
   }
 }
 
 @media (max-width: 600px) {
   .courses-section {
-    grid-template-columns: 1fr; /* Mobile: 1 card */
+    grid-template-columns: 1fr;
+  }
+
+  .about-hero {
+    height: 40vh;
   }
 }
-
-
-
