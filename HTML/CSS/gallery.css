@@ -89,3 +89,43 @@ font-size:15px;
 }
 
 }
+/* IMAGE MODAL */
+
+.img-modal{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.9);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:9999;
+padding:20px;
+}
+
+.img-modal img{
+max-width:90%;
+max-height:90%;
+border-radius:10px;
+animation:zoom .3s;
+}
+
+@keyframes zoom{
+from{transform:scale(.8)}
+to{transform:scale(1)}
+}
+
+.img-modal .close{
+position:absolute;
+top:20px;
+right:30px;
+color:#fff;
+font-size:40px;
+cursor:pointer;
+}
+
+#caption{
+color:#fff;
+margin-top:12px;
+text-align:center;
+font-size:14px;
+}

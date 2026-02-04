@@ -58,26 +58,97 @@
         </section>
 
         <section class="section">
+            <div id="img-modal" class="img-modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modal-img">
+                <div id="caption"></div>
+            </div>
+
             <div class="container">
 
                 <div class="gallery-grid">
 
-                    <img src="./assests/NCA1.jpeg">
-                    <img src="./assests/NCA2.jpeg">
-                    <img src="./assests/NCA3.jpeg">
+                    <img src="./assests/NCA1.jpeg" loading="lazy" alt="">
+                    <img src="./assests/NCA2.jpeg" loading="lazy" alt="">
+                    <img src="./assests/NCA3.jpeg" loading="lazy" alt="">
 
-                    <img src="./assests/img1.jpg">
-                    <img src="./assests/img2.jpg">
-                    <img src="./assests/img3.jpg">
+                    <img src="./assests/img1.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img2.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img3.jpeg" loading="lazy" alt="">
 
-                    <img src="./assests/img4.jpg">
-                    <img src="./assests/NCA2.jpeg">
-                    <img src="./assests/NCA3.jpeg">
+                    <img src="./assests/img4.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img5.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img6.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img7.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img8.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img9.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img10.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img11.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img12.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img13.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img14.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img15.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img16.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img17.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img18.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img19.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img20.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img21.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img22.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img23.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img24.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img25.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img26.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img27.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img28.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img29.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img30.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img31.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img32.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img33.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img34.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img35.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img36.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img37.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img38.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img39.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img40.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img41.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img42.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img43.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img44.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img45.jpeg" loading="lazy" alt="">
+                    <img src="./assests/img46.jpeg" loading="lazy" alt="">
 
                 </div>
 
             </div>
         </section>
+       <script>
+const modal = document.getElementById("img-modal");
+const modalImg = document.getElementById("modal-img");
+const captionText = document.getElementById("caption");
+const closeBtn = document.querySelector(".img-modal .close");
+
+document.querySelectorAll(".gallery-grid img").forEach(img => {
+    img.addEventListener("click", () => {
+        modal.style.display = "flex";
+        modalImg.src = img.src;
+        captionText.innerText = img.alt;
+    });
+});
+
+closeBtn.onclick = () => {
+    modal.style.display = "none";
+};
+
+modal.addEventListener("click", e => {
+    if(e.target === modal){
+        modal.style.display = "none";
+    }
+});
+</script>
+
 
     </main>
 
