@@ -493,12 +493,20 @@
 }
 
 /* Center hero content over video */
+.hero-content {
+  position: absolute;
+  top: 10%;   /* reduce this value to move more up */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
 .hero-text {
   color: white;
-  text-align: center;
   font-size: 28px;
   line-height: 1.5;
 }
+
 .hero-inner {
   display: flex;
   justify-content: center; /* horizontal center */

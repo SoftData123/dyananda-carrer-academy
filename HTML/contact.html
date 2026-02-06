@@ -51,32 +51,80 @@
 
                 <div class="contact-wrap">
                     <!-- Contact Form -->
-                    <div class="card contact-card">
-                        <h3>संदेश पाठवा</h3>
-                        <form id="contactForm">
-                            <div class="grid grid-2">
-                                <div>
-                                    <label for="name">नाव</label>
-                                    <input id="name" class="input" type="text" placeholder="आपले नाव" required>
-                                </div>
-                                <div>
-                                    <label for="phone">फोन</label>
-                                    <input id="phone" class="input" type="tel" placeholder="आपला फोन नंबर" required>
-                                </div>
-                            </div>
-                            <div>
-                                <label for="email">ईमेल</label>
-                                <input id="email" class="input" type="email" placeholder="आपला ईमेल">
-                            </div>
-                            <div>
-                                <label for="message">संदेश</label>
-                                <textarea id="message" rows="5" placeholder="कशात मदत करू शकतो?"></textarea>
-                            </div>
-                            <div class="form-btn">
-                                <button class="btn primary" type="submit">पाठवा</button>
-                            </div>
-                        </form>
-                    </div>
+<div class="card contact-card">
+    <h3>संदेश पाठवा</h3>
+
+    <form id="contactForm">
+        <div class="grid grid-2">
+            <div>
+                <label>नाव</label>
+                <input id="name" class="input" type="text" placeholder="आपले नाव" required>
+            </div>
+
+            <div>
+                <label>फोन</label>
+                <input id="phone" class="input" type="tel" placeholder="आपला फोन नंबर" required>
+            </div>
+        </div>
+
+        <div>
+            <label>ईमेल</label>
+            <input id="email" class="input" type="email" placeholder="आपला ईमेल">
+        </div>
+
+        <div>
+            <label>संदेश</label>
+            <textarea id="message" rows="5" placeholder="कशात मदत करू शकतो?" required></textarea>
+        </div>
+
+        <div class="form-btn">
+            <button class="btn primary" type="submit">पाठवा</button>
+        </div>
+    </form>
+</div>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  if(!name || !phone || !message){
+    alert("कृपया सर्व माहिती भरा.");
+    return;
+  }
+
+  const body =
+`नाव: ${name}
+फोन: ${phone}
+ईमेल: ${email || "N/A"}
+
+संदेश:
+${message}`;
+
+  const mailLink =
+    "mailto:dnyanadacareeracademy@gmail.com" +
+    "?subject=" + encodeURIComponent("Website Contact Message") +
+    "&body=" + encodeURIComponent(body);
+
+  window.location.href = mailLink;
+
+  // reset after short delay
+  setTimeout(() => {
+    document.getElementById("contactForm").reset();
+  }, 500);
+});
+</script>
+
+
+ 
+
+
+
+
 
                     <!-- Contact Info -->
                     <div class="card contact-info-card">
