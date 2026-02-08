@@ -579,4 +579,12 @@ textarea:focus {
     bottom: auto;
     margin-top: 12px;
   }
+  .brand img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fff;
+  padding: 4px;               /* white ring */
+}
 }
