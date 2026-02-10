@@ -1,8 +1,8 @@
 /* HERO */
 
 .gallery-hero{
-background:url("../assests/NCA1.jpeg") center top / cover no-repeat;
-min-height:420px;
+background:url("../assests/img16.jpeg") center top / cover no-repeat;
+min-height:700px;
 display:flex;
 align-items:center;
 position:relative;

@@ -41,116 +41,157 @@
         </div>
     </header>
 
-    <!-- Main Section -->
-    <main>
-        <section class="section" style="padding-top:50px">
-            <div class="container">
-                <h1 class="section-title">संपर्क</h1>
-                <p class="section-sub">प्रवेश किंवा अभ्यासक्रमाच्या तपशीलांसाठी संपर्क साधा. आम्हाला मदत करण्यात आनंद
-                    होईल.</p>
+ <!-- Main Section -->
+<main>
+    <section class="section" style="padding-top:50px">
+        <div class="container">
+            <h1 class="section-title">संपर्क</h1>
+            <p class="section-sub">
+                प्रवेश किंवा अभ्यासक्रमाच्या तपशीलांसाठी संपर्क साधा. आम्हाला मदत करण्यात आनंद होईल.
+            </p>
 
-                <div class="contact-wrap">
-                    <!-- Contact Form -->
-<div class="card contact-card">
-    <h3>संदेश पाठवा</h3>
+            <div class="contact-wrap">
 
-    <form id="contactForm">
-        <div class="grid grid-2">
-            <div>
-                <label>नाव</label>
-                <input id="name" class="input" type="text" placeholder="आपले नाव" required>
+                <!-- Contact Form -->
+                <div class="card contact-card">
+                    <h3>संदेश पाठवा</h3>
+
+                    <form id="contactForm">
+                        <div class="grid grid-2">
+                            <div>
+                                <label>नाव</label>
+                                <input id="name" class="input" type="text" placeholder="आपले नाव" required>
+                            </div>
+
+                            <div>
+                                <label>फोन</label>
+                                <input id="phone" class="input" type="tel" placeholder="आपला फोन नंबर" required>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label>ईमेल</label>
+                            <input id="email" class="input" type="email" placeholder="आपला ईमेल">
+                        </div>
+
+                        <div>
+                            <label>संदेश</label>
+                            <textarea id="message" rows="5" placeholder="कशात मदत करू शकतो?" required></textarea>
+                        </div>
+
+                        <div class="form-btn">
+                            <button class="btn primary" type="submit">पाठवा</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="card contact-info-card">
+                    <h3>आमच्याशी भेटा</h3>
+                    <ul class="footer-list">
+                        <li class="contact-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>सिन्नर, Maharashtra</span>
+                        </li>
+                        <li class="contact-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+91 9527425002</span>
+                        </li>
+                        <li class="contact-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>info@dnyanadaacademy.com</span>
+                        </li>
+                    </ul>
+
+                    <div class="map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3752.9127773715486!2d73.99086377522497!3d19.84364318152547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTnCsDUwJzM3LjEiTiA3M8KwNTknMzYuNCJF!5e0!3m2!1sen!2sin!4v1769588405318!5m2!1sen!2sin"
+                            width="600" height="450" style="border:0;" allowfullscreen loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+
             </div>
-
-            <div>
-                <label>फोन</label>
-                <input id="phone" class="input" type="tel" placeholder="आपला फोन नंबर" required>
-            </div>
         </div>
+    </section>
+</main>
 
-        <div>
-            <label>ईमेल</label>
-            <input id="email" class="input" type="email" placeholder="आपला ईमेल">
-        </div>
-
-        <div>
-            <label>संदेश</label>
-            <textarea id="message" rows="5" placeholder="कशात मदत करू शकतो?" required></textarea>
-        </div>
-
-        <div class="form-btn">
-            <button class="btn primary" type="submit">पाठवा</button>
-        </div>
-    </form>
+<!-- Thank You Popup -->
+<div id="thankYouPopup" class="thankyou-popup">
+    <div class="thankyou-box">
+        <h3>🙏 धन्यवाद!</h3>
+        <p>आपला संदेश यशस्वीरित्या पाठवला गेला आहे.<br>आम्ही लवकरच आपल्याशी संपर्क करू.</p>
+        <button class="btn primary" onclick="closePopup()">ठीक आहे</button>
+    </div>
 </div>
 
+<!-- Popup CSS -->
+<style>
+.thankyou-popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+.thankyou-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    animation: scaleIn 0.3s ease;
+}
+@keyframes scaleIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+</style>
+
+<!-- WhatsApp Script -->
 <script>
-document.getElementById("contactForm").addEventListener("submit", function(e){
-  e.preventDefault();
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
 
-  const name = document.getElementById("name").value.trim();
-  const phone = document.getElementById("phone").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const message = document.getElementById("message").value.trim();
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
 
-  if(!name || !phone || !message){
-    alert("कृपया सर्व माहिती भरा.");
-    return;
-  }
+    if (!name || !phone || !message) {
+        alert("कृपया सर्व माहिती भरा.");
+        return;
+    }
 
-  const body =
-`नाव: ${name}
+    const whatsappNumber = "919527425002"; // your WhatsApp number
+
+    const text =
+`नमस्कार 🙏
+नाव: ${name}
 फोन: ${phone}
 ईमेल: ${email || "N/A"}
 
 संदेश:
 ${message}`;
 
-  const mailLink =
-    "mailto:dnyanadacareeracademy@gmail.com" +
-    "?subject=" + encodeURIComponent("Website Contact Message") +
-    "&body=" + encodeURIComponent(body);
+    const url = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(text);
 
-  window.location.href = mailLink;
+    document.getElementById("thankYouPopup").style.display = "flex";
 
-  // reset after short delay
-  setTimeout(() => {
-    document.getElementById("contactForm").reset();
-  }, 500);
+    setTimeout(() => {
+        window.open(url, "_blank");
+        document.getElementById("contactForm").reset();
+    }, 800);
 });
+
+function closePopup() {
+    document.getElementById("thankYouPopup").style.display = "none";
+}
 </script>
 
-
- 
-
-
-
-
-
-                    <!-- Contact Info -->
-                    <div class="card contact-info-card">
-                        <h3>आमच्याशी भेटा</h3>
-                        <ul class="footer-list">
-                            <li class="contact-item">
-                                <i class="fa-solid fa-location-dot"></i>
-                                <span>सिन्नर, Maharashtra</span>
-                            </li>
-                            <li class="contact-item"><i class="fa-solid fa-phone"></i> <span>+91 9527425002</span></li>
-                            <li class="contact-item"><i class="fa-solid fa-envelope"></i>
-                                <span>info@dnyanadaacademy.com</span>
-                            </li>
-
-                        </ul>
-                        <div class="map">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3752.9127773715486!2d73.99086377522497!3d19.84364318152547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTnCsDUwJzM3LjEiTiA3M8KwNTknMzYuNCJF!5e0!3m2!1sen!2sin!4v1769588405318!5m2!1sen!2sin"
-                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
 
     <!-- Footer -->
     <footer class="site-footer">
