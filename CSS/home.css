@@ -540,6 +540,7 @@
 }
 
 .hero-text {
+margin-top: 50px;
   color: white;
   font-size: 28px;
   line-height: 1.5;
@@ -619,6 +620,13 @@
   .hero-inner .stats-grid {
     grid-template-columns: 1fr;
   }
+  
+  .hero-text {
+  margin-top: 15px;
+  color: white;
+  font-size: 28px;
+  line-height: 1.5;
+}
 }
 
 /* Scrolling red tape */
